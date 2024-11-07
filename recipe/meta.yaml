@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/beancount-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beancount-{{ version }}.tar.gz
   sha256: cf6686869c7ea3eefc094ee13ed866bf5f7a2bb0c61e4d4f5df3e35f846cffdf
 
 build:
@@ -16,21 +16,20 @@ build:
     - bean-example = beancount.scripts.example:main
     - bean-format = beancount.scripts.format:main
     - treeify = beancount.tools.treeify:main
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - python >=3.7
+    - python
     - meson-python >=0.14.0
     - meson >=1.2.1
     - pip
   run:
-    - python >=3.7
+    - python
     - click >=7.0
     - python-dateutil >=2.6.0
     - regex >=2022.9.13
