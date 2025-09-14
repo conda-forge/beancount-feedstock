@@ -1,5 +1,5 @@
 {% set name = "beancount" %}
-{% set version = "3.0.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beancount-{{ version }}.tar.gz
-  sha256: cf6686869c7ea3eefc094ee13ed866bf5f7a2bb0c61e4d4f5df3e35f846cffdf
+  sha256: 9f374bdcbae63328d8a0cf6d539490f81caa647f2d1cc92c9fa6117a9eb092ca
 
 build:
   entry_points:
@@ -17,7 +17,7 @@ build:
     - bean-format = beancount.scripts.format:main
     - treeify = beancount.tools.treeify:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 0
 
 requirements:
   build:
