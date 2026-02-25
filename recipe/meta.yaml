@@ -23,6 +23,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - bison >=3.8     # [not win]
+    - flex >=2.6.4    # [not win]
+    - m2-bison        # [win]
+    - m2-flex         # [win]
   host:
     - python
     - meson-python >=0.14.0
