@@ -1,5 +1,5 @@
 {% set name = "beancount" %}
-{% set version = "3.2.0" %}
+{% set version = "3.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beancount-{{ version }}.tar.gz
-  sha256: 9f374bdcbae63328d8a0cf6d539490f81caa647f2d1cc92c9fa6117a9eb092ca
+  sha256: f52c4d237bcb092cbf02a29373d3e59d95349c2828a91491818ae437ee220f74
 
 build:
   entry_points:
